@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ImageFilterCollectionView" customModule="Core_Image_Application" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IgL-qg-Zdm">
+                    <rect key="frame" x="0.0" y="25" width="260" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="260" id="cSy-7S-RMD"/>
+                        <constraint firstAttribute="height" constant="150" id="yyL-bs-mN2"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="EmptyImage" id="m38-lM-O8B"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gym-9t-sad">
+                    <rect key="frame" x="-2" y="0.0" width="264" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="260" id="71F-6K-uGn"/>
+                    </constraints>
+                    <textFieldCell key="cell" alignment="center" title="Filter Name" id="S3l-YI-c8A">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="IgL-qg-Zdm" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Npo-fs-see"/>
+                <constraint firstItem="gym-9t-sad" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Vbk-Gn-TV3"/>
+                <constraint firstItem="gym-9t-sad" firstAttribute="top" secondItem="IgL-qg-Zdm" secondAttribute="bottom" constant="8" id="esa-Zm-1rV"/>
+                <constraint firstAttribute="trailing" secondItem="gym-9t-sad" secondAttribute="trailing" id="fED-Hx-kGB"/>
+                <constraint firstItem="IgL-qg-Zdm" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="sdg-zX-6Tc"/>
+                <constraint firstAttribute="trailing" secondItem="IgL-qg-Zdm" secondAttribute="trailing" id="uxA-dU-g36"/>
+                <constraint firstAttribute="bottom" secondItem="gym-9t-sad" secondAttribute="bottom" id="xLb-d2-Nhr"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="184"/>
+        </customView>
+        <collectionViewItem id="fWt-oG-wQk" customClass="ImageFilterCollectionView" customModule="Core_Image_Application" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="IgL-qg-Zdm" id="Oo0-Fu-4cJ"/>
+                <outlet property="textField" destination="gym-9t-sad" id="Dob-fK-ZVz"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="tDX-3a-vkD"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="EmptyImage" width="240" height="427"/>
+    </resources>
+</document>
